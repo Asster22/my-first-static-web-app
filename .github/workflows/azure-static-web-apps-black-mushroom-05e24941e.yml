@@ -43,12 +43,9 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_BLACK_MUSHROOM_05E24941E }}
           action: "close"
-api
-│   ├── message
-│   │   ├── function.json
-│   │   └── index.js
-│   ├── host.json
-│   ├── local.settings.json
-│   └── package.json
-│
-└── (folders and files from your static web app)
+module.exports = async function (context, req) {
+    context.res.json({
+        text: "Hello from the API"
+    });
+};
+
